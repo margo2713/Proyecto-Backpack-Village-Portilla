@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #f6f6f6;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/fondo-cabecera.jpeg);
+    height: 11rem;
+}
+
+.header_logo {
+    display: flex;
+    align-self: center;
+    letter-spacing: 13px;
+    margin-top: 0.6rem;
+    text-transform: uppercase;
+}
+
+.header_logo a {
+    text-decoration: none;
+}
+
+.header_logo a .header_logo-h1 {
+    color: rgb(74, 77, 99);
+    font-size: 5rem;
+    font-family: 'Shizuru', cursive;
+    text-shadow: 5px 5px 10px #FCA311;
+}
+
+.header_links {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #FCA311;
+}
+
+.links a:visited,
+.links a:active,
+.links a:any-link{
+    color: #735751;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+.links {
+    width: 70rem;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.lista {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sublista {
+    list-style: none;
+    position: absolute;
+    display: none;
+    background: #FCA311;
+}
+
+.sublista li a{
+	display: block;
+	padding: 18px;
+	color: #E07A5F;
+	text-decoration: none;
+}
+
+.lista li:hover .sublista{
+	display: block;
+}
+
+.carrusel {
+    width: 100%;
+    margin-bottom: 6rem;
+    text-align: center;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.titulos {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    color: #3D405B;
+}
+
+.claro {
+    color: #f6f6f6;
+    text-shadow: 2px 2px #000000;
+}
+
+.mochilasVarias {
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.mochilasVarias img {
+    border-radius: 10px 100px / 120px;
+    
+}
+
+.parrafo {
+    width: 500px;
+    margin: 3rem;
+    font-size: 23px;
+    text-align: center;
+    align-self: center;
+}
+
+.equipo_divGeneral {
+    margin: 5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.equipo_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: -2.6rem;
+}
+
+.equipo_div_content {
+    width: 70rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.equipo_div:first-child {
+    margin-top: 0;
+}
+
+.equipo_div:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.equipo_div:nth-child(even) .equipo_div_content {
+    flex-direction: row-reverse;
+} 
+
+.equipo_div_content_atras {
+    display: none;
+}
+
+.equipo .equipo_divGeneral .equipo_div .equipo_div_content .nombres_equipo {
+    
+    color: #3d405d;
+    background-color: #f6f6f6;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 23px;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+}
+
+.equipo .equipo_divGeneral .equipo_div .equipo_div_content img {
+    border-radius: 10px 100px / 120px;
+}
+
+.marcas {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.marcas .logo img {
+    opacity: 0.6;
+    border-radius: 50% 50% / 50% 50%;;
+}
+
+.div_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+.formulario_beneficios {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.fieldset_beneficios {
+    border-style: double;
+    border-width: 0.3rem;
+    border-color: gray;
+    color: #3D405B;
+    width: 650px;
+    height: 150px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.beneficiosExclusivos {
+    font-family: 'Fredericka the Great';
+    text-shadow: 1.5px 1.5px white;
+    text-align: center;
+}
+
+.fieldset_beneficios .fieldset_beneficios-label {
+    text-align: center;
+    font-size: 1.1rem;  
+}
+
+.fieldset_beneficios .fieldset_beneficios-input {
+    margin: 8px;
+    padding: 2px;
+    border-color: gray;
+    font-family: 'Roboto Mono';
+}
+
+.fieldset_beneficios-label .terminos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerGeneral {
+    width: 100%;
+    height: 6rem;
+    background-color: #14213D;
+    display: flex;
+    padding-left: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 1rem;  
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.footer .footer-parrafo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer .footer-parrafo .footer-anchor {
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.mochila {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 2rem;
+}
+
+.mochila .mochila-span {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mochila .mochila-img {
+    margin: 3rem 1rem 3rem;
+    border-radius: 10% 10% / 10% 10%
+}
+
+.opciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 300px;
+    margin: 2rem;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sucursales {
+    margin: 7rem;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    padding-left: 7rem;
+}
+
+.sucursales .subtitulo-sucursal {
+    margin-top: 2rem;
+}
+
+.sucursales a:visited,
+.sucursales a:active,
+.sucursales a:any-link {
+    color: #3D405B;
+    text-decoration: none;
+}
+
+.sucursales a:hover {
+    color: #FCA311;
+}
+
+.sucursalmapa {
+    display: flex;
+    flex-direction: row;
+}
+
+.mapa {
+    margin: 3rem;
+    padding-right: 7rem;
+}
+
+
+.fondo_contacto {
+    min-height: 110vh;
+    background-image: url("../img/fondo-contacto.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.formularios {
+    padding: 4rem;
+}
+
+.formularios .formulario-general {
+    width: 30rem;
+}
+
+.formularios .formulario-general .formulario-label {
+    margin-top: 0.7rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 1.5px 1.5px #000000;
+}
+
+.formularios .formulario-general .formulario-label .formulario-input,
+.formularios .formulario-general .formulario-label .formulario-textarea {
+    margin-top: 0.5rem;
+    font-family: 'Open Sans';
+}
+
+.formularios .formulario-general .terminos-condiciones {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boton-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-enviar-formularios {
+    margin: 2rem;
+    margin-left: 6.3rem;
+    width: 10em;
+    height: 3em;
+    border: none;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+}
+
+.form-work {
+    background-image: url(../img/fondo-work2.jpeg);
+    background-size: cover;
+}
+
+.form-work .formulario-general {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 4rem;
+    padding-top: 1rem;
+}
+
+.form-work .formulario-general .formulario-label {
+    margin-top: 1rem;
+}
+
+.form-work .formulario-general .formulario-label .formulario-input {
+    margin-top: 0.5rem;
+}
+
+.formularios .formulario-general .texto-oscuro {
+    color: #000000;
+    text-shadow: 0.5px 0.5px #E5E5E5;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 425px) 
+{
+    .header {
+        max-width: 100%;
+        justify-content: center;
+        height: auto;
+    }
+
+    .header_logo a .header_logo-h1 {
+        font-size: 4rem;
+        text-shadow: 5px 5px 10px #fca311;
+        text-align: center;
+    }
+
+    .header_links {
+        margin-top: 0.1;
+        height: auto;
+        align-self: center;   
+    }
+
+    .lista {
+        flex-direction: column;
+        align-items: center;
+        border: #f6f6f6 solid 2px;
+    }
+   
+    .carrusel,
+    .carrusel div>img{
+        max-width: 100vw;
+        max-height: 400px;
+    }
+
+    .mochilasVarias {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .parrafo {
+        width: 100%;
+    }
+
+    .mochilasVarias img {
+        width: 400px;
+        height: 400px;
+        
+    }
+
+    .equipo_divGeneral {
+        display: grid;
+        grid-template-columns: repeat(1, 425px);
+        margin: 1px;
+    }
+
+    .equipo_div_content {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .equipo_divGeneral img, .equipo_divGeneral p {
+        margin-bottom: 10px;
+    }
+
+    .equipo_div {
+        margin-top: 0rem;
+    }
+
+    .equipo_div:nth-child(even) .equipo_div_content {
+        flex-direction: column;
+    } 
+
+    .marcas {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 280px);
+    }
+
+    .fieldset_beneficios {
+        width: 98vw;
+    }
+
+    /*PRODUCTOS*/
+
+    .mochila {
+        max-width: 425px;
+        margin: 0;
+    }
+
+    .productos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fila {
+        margin: 0;
+        max-width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*SUCURSAL*/
+
+    .sucursalmapa {
+        flex-direction: column;
+    }
+
+    .sucursales {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .mapa {
+        max-width: 100%;
+        padding-right: 0;
+        margin: 10px;
+    }
+
+    .mapa iframe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    /*CONTACTO*/
+
+    .fondo_contacto {
+        max-height: 100vh;
+    }
+
+    .formularios {
+        margin: 0;
+        padding: 0;
+    }
+
+    .formulario-general {
+        max-width: 425px;
+    }
+
+    .formularios .formulario-general .formulario-label {
+        margin: 30px;
+    }
+
+    .boton-enviar-formularios{
+        margin-left: 10px;
+    }
+
+    /*TRABAJA CON NOSOTROS*/
+
+    .form-work .formulario-general {
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    /*FOOTER*/
+
+    .footerGeneral {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .header {
+        max-width: 768px;
+        justify-content: center;
+        height: auto;
+    }
+
+    .header_logo a .header_logo-h1 {
+        font-size: 6rem;
+        text-shadow: 5px 5px 10px #fca311;
+        text-align: center;
+    }
+
+    .carrusel,
+    .carrusel div>img{
+        max-width: 100vw;
+        max-height: 500px;
+    }
+
+    .lista {
+        border: #f6f6f6 solid 2px;
+    }
+
+    .mochilasVarias {
+        max-width: 768px;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        
+    }
+
+    .equipo_divGeneral {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 1px;
+    }
+
+    .equipo_div_content {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .equipo_divGeneral img, .equipo_divGeneral p {
+        margin-bottom: 10px;
+    }
+
+    .equipo_div {
+        max-width: 768px;
+        margin-top: 0rem;
+    }
+
+    .equipo_div:nth-child(even) .equipo_div_content {
+        flex-direction: column;
+    }
+
+    .marcas {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    /*PRODUCTOS*/
+
+    .mochila {
+        max-width: 768px;
+        margin: 0;
+    }
+
+    .productos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fila {
+        margin: 0;
+        max-width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*SUCURSALES*/
+
+    .sucursalmapa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sucursales {
+        max-width: 768px;
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 1rem;
+    }
+
+    .mapa {
+        max-width: 768px;
+        padding-right: 0;
+        margin: 10px;
+    }
+
+    .mapa iframe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 700px;
+    }
+
+    /*CONTACTO*/
+
+    .formularios {
+        padding: 0;
+    }
+
+    .formularios .formulario-general {
+        margin: 0;
+        width: 650px;
+    }
+
+    .formularios .formulario-general .formulario-label {
+        margin-left: 7rem;
+    }
+
+    .boton-enviar-formularios{
+        margin-left: 9rem;
+    }
+
+}

@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(../img/fondo-cabecera.jpeg);
+    background-image: url(../img/fondo-header5.jpeg);
     height: 11rem;
 }
 
@@ -34,7 +34,7 @@ body {
     color: rgb(74, 77, 99);
     font-size: 5rem;
     font-family: 'Shizuru', cursive;
-    text-shadow: 5px 5px 10px #FCA311;
+    text-shadow: 5px -3px 10px #f6f6f6;
 }
 
 .header_links {
@@ -52,6 +52,7 @@ body {
 .links a:any-link{
     color: #735751;
     text-decoration: none;
+    text-shadow: 0.5px -0.5px #E5E5E5;
     font-size: 16pt;
 }
 
@@ -61,6 +62,7 @@ body {
 
 .links a:hover {
     color: white;
+    text-shadow: 0.5px -0.5px #735751;
 }
 
 .lista {
@@ -97,9 +99,14 @@ body {
     overflow-x: scroll;
 }
 
+.carrusel .img-carrusel {
+    height: 700px;
+    object-fit: cover;
+}
+
 .titulos {
     padding-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 3rem;
     font-family: 'OpenSans-ExtraBold', sans-serif;
@@ -321,11 +328,13 @@ body {
 }
 
 .sucursales {
-    margin: 7rem;
+    margin: 4rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 1000px;
-    padding-left: 7rem;
+    padding-left: 14rem;
+    padding-bottom: 2rem;
 }
 
 .sucursales .subtitulo-sucursal {
@@ -346,11 +355,13 @@ body {
 .sucursalmapa {
     display: flex;
     flex-direction: row;
+    margin-bottom: 3rem;
 }
 
 .mapa {
     margin: 3rem;
     padding-right: 7rem;
+    padding-bottom: 2rem;
 }
 
 

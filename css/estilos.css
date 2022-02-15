@@ -78,6 +78,8 @@ body {
     position: absolute;
     display: none;
     background: #FCA311;
+    visibility: hidden;
+    transition: visibility 5s; 
 }
 
 .sublista li a{
@@ -89,6 +91,7 @@ body {
 
 .lista li:hover .sublista{
 	display: block;
+    visibility: visible;
 }
 
 .carrusel {
@@ -157,7 +160,42 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
+    position: relative;
+}
+
+.equipo_div_content img {
+    transform: skewY(0deg);
+    filter: none;
+    transition: transform 2s, filter 2s; 
+}
+
+.equipo_div_content img:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    filter: blur(2px);
+}
+
+.equipo_div_content img:hover ~ .equipo_div_content_atras {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    width: 350px;
+    left: 0;
+    margin-left: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px white;
+    pointer-events: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.equipo_div:nth-child(even) .equipo_div_content img:hover ~ .equipo_div_content_atras 
+{
+    left: auto;
+    right:0;
+    margin-right: 3rem;
 }
 
 .equipo_div:first-child {
@@ -202,8 +240,15 @@ body {
 }
 
 .marcas .logo img {
-    opacity: 0.6;
-    border-radius: 50% 50% / 50% 50%;;
+    filter: opacity(0.4);
+    box-shadow: none;
+    border-radius: 50% 50% / 50% 50%;
+    transition: filter 2s, box-shadow 1s;
+}
+
+.marcas .logo img:hover {
+    filter: opacity(1);
+    box-shadow: 1px 1px 20px black;
 }
 
 .div_form {

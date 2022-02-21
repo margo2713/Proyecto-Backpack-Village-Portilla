@@ -10,27 +10,17 @@ body {
     background-color: #f6f6f6;
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url(../img/fondo-header5.jpeg);
-    height: 11rem;
-}
-
 .header_logo {
-    display: flex;
-    align-self: center;
-    letter-spacing: 13px;
-    margin-top: 0.6rem;
+    letter-spacing: 0.8rem;
     text-transform: uppercase;
+    background: #bdc3c7; 
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    
+    height: fit-content;
 }
 
-.header_logo a {
-    text-decoration: none;
-}
-
-.header_logo a .header_logo-h1 {
+.header_logo .header_logo-h1 {
     color: rgb(74, 77, 99);
     font-size: 6rem;
     font-family: 'Shizuru', cursive;
@@ -38,13 +28,12 @@ body {
 }
 
 .header_links {
-    margin-top: 0.8rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     width: 100%;
-    height: 2rem;
     background-color: #FCA311;
+    color: #735751;
+    font-size: 16pt;
+    font-weight:bold;
+    text-shadow: 0.5px -0.5px #E5E5E5;
 }
 
 .links a:visited,
@@ -66,11 +55,7 @@ body {
 }
 
 .lista {
-    list-style: none;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    width: 98vw;
 }
 
 .sublista {
@@ -142,7 +127,6 @@ body {
 }
 
 .equipo_divGeneral {
-    margin: 5rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -155,15 +139,17 @@ body {
 }
 
 .equipo_div_content {
-    width: 70rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-evenly;
     position: relative;
 }
 
 .equipo_div_content img {
+    width: 400px;
+    height: 300px;
     transform: skewY(0deg);
     filter: none;
     transition: transform 2s, filter 2s; 
@@ -231,8 +217,9 @@ body {
 .marcas {
     margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(3, 450px);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -400,7 +387,6 @@ body {
 
 
 .fondo_contacto {
-    min-height: 110vh;
     background-image: url("../img/fondo-contacto.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -479,7 +465,7 @@ body {
 
 /*MEDIA QUERIES*/
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .header {
         max-width: 768px;
         justify-content: center;
@@ -494,7 +480,7 @@ body {
 
     .header_links {
         align-items: start;
-        height: 2.3rem;
+        height: auto;
     }
 
     .img-carrusel {
@@ -562,6 +548,10 @@ body {
         margin: 0;
     }
 
+    .mochila-img {
+        width: 20rem;
+    }
+
     .productos {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -619,25 +609,23 @@ body {
     }
 }
 
-@media screen and (max-width: 425px) 
+@media screen and (max-width: 433px) 
 {
     .header {
         max-width: 100%;
         justify-content: center;
-        height: 20.8rem;
+        height: auto;
     }
 
-    .header_logo a .header_logo-h1 {
-        font-size: 4rem;
+    .header_logo .header_logo-h1 {
+        font-size: 3.5rem;
         text-shadow: 5px 5px 10px #fca311;
         text-align: center;
         color: rgb(196 199 217);
     }
 
     .header_links {
-        margin-top: 0.1;
         height: auto;
-        align-self: center;   
     }
 
     .lista {
@@ -663,37 +651,46 @@ body {
     .mochilasVarias img {
         width: 400px;
         height: 400px;
-        
     }
 
     .equipo_divGeneral {
         display: grid;
-        grid-template-columns: repeat(1, 425px);
-        margin: 1px;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .equipo_div_content {
         margin-bottom: 30px;
         display: flex;
         flex-direction: column;
+        width: auto;
     }
 
-    .equipo_divGeneral img, .equipo_divGeneral p {
+    .equipo_divGeneral img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .equipo_divGeneral img, 
+    .equipo_divGeneral p {
         margin-bottom: 10px;
     }
 
-    .equipo_div {
+    .equipo_div,
+    .equipo_div:nth-child(even) {
         margin-top: 0rem;
+        justify-content: center;
     }
 
     .equipo_div:nth-child(even) .equipo_div_content {
         flex-direction: column;
-    } 
+    }
 
-    .equipo_div_content img:hover ~ .equipo_div_content_atras {
-        margin-left: 2.2rem;
-        margin-bottom: 4rem;
-        padding: 0;
+    .equipo_div_content img:hover ~ .equipo_div_content_atras,
+    .equipo_div:nth-child(even) .equipo_div_content img:hover ~ .equipo_div_content_atras {
+        margin: auto;
+        width: auto;
+        padding: unset;
+        top: 1rem;
     }
     
     .marcas {
@@ -705,10 +702,18 @@ body {
         width: 98vw;
     }
 
+    .beneficiosExclusivos {
+        margin-bottom: auto !important;
+    }
+
+    .footerGeneral {
+        height: auto;
+    }
+
     /*PRODUCTOS*/
 
     .mochila-img {
-        max-width: 425px;
+        max-width: 26.5rem;
         margin: 0;
     }
 
@@ -746,10 +751,6 @@ body {
     }
 
     /*CONTACTO*/
-
-    .fondo_contacto {
-        max-height: 100vh;
-    }
 
     .formularios {
         margin: 0;
@@ -795,19 +796,48 @@ body {
     }
 
     .header {
-        width: 320px;
-        justify-content: center;
-        height: 18.3rem;
+        height: auto;
     }
 
-    .header_logo a .header_logo-h1 {
-        font-size: 2.7rem;
-        padding-left: 0.5rem;
+    .header_logo .header_logo-h1 {
+        font-size: 2.5rem;
     }
 
     .header_links {
-        margin-top: 0.7rem;
-        height: 10.3rem
+        height: auto;
+    }
+
+    .equipo_div_content{
+        width: auto;
+    }
+
+    .equipo_divGeneral {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .equipo_div,
+    .equipo_div:nth-child(even){
+        justify-content: center;
+    }
+
+    .nombres_equipo {
+        text-align: center;
+    }
+
+    .equipo_div_content img:hover ~ .equipo_div_content_atras,
+    .equipo_div:nth-child(even) .equipo_div_content img:hover ~ .equipo_div_content_atras {
+        margin: auto;
+        width: auto;
+        padding: unset;
+        top: 1rem;
+    }
+
+    .beneficiosExclusivos {
+        margin-bottom: auto !important;
+    }
+
+    .footerGeneral {
+        height: auto;
     }
 
     .mochila-img {
@@ -815,9 +845,4 @@ body {
         max-width: 16rem;
         margin: 0;
     }
-
-
 }
-
-
-

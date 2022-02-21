@@ -11,31 +11,46 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header_logo">
-            <a href="#">
-                <h1 class="header_logo-h1">Backpack Village</h1>
-            </a>
+    <header class="header container-fluid p-0 w-100">
+        <div class="header_logo row m-0 text-center">
+            <h1 class="header_logo-h1 my-3">Backpack Village</h1>
         </div>
-            
-        <div class="header_links">
-            <nav class="links">
-                <ul class="lista">
-                    <li><a href="./index.html" >Inicio</a></li>
-                    <li><a href="./vistas/productos.html">Productos</a>
-                        <ul class="sublista">
-                            <li><a href="./vistas/mujer.html">Mujer</a></li>
-                            <li><a href="./vistas/hombre.html">Hombre</a></li>
-                            <li><a href="./vistas/kids.html">Kids</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./vistas/sucursales.html">Sucursales</a></li>
-                    <li><a href="./vistas/contacto.html">Contacto</a></li>
-                    <li><a href="./vistas/trabajaConNosotros.html">Trabaja con nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-0 header_links">
+            <div class="container-fluid flex-column">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-around lista">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html" >Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productos">
+                                <li><a class="dropdown-item" href="./vistas/mujer.html">Mujer</a></li>
+                                <li><a class="dropdown-item" href="./vistas/hombre.html">Hombre</a></li>
+                                <li><a class="dropdown-item" href="./vistas/kids.html">Kids</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./vistas/sucursales.html" >Sucursales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./vistas/contacto.html" >Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./vistas/trabajaConNosotros.html" >Trabaja con nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+    
 
     <div id="carruselInicio" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -60,7 +75,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
         </button>
-      </div>
+    </div>
 
     <h1 class="titulos">¿Quiénes somos?</h1>
     <div class="mochilasVarias">
@@ -68,7 +83,7 @@
             <h3>Misión</h3>
             Somos una empresa comprometida con las necesidades de las personas ofreciendo mochilas en diferentes presentaciones, diseños, tamaños y colores de acuerdo a las necesidades de cada cliente utilizando materiales de la mejor calidad y resistentes basándose en la comodidad de nuestros consumidores y manejando precios accesibles para su adquisición.
         </aside>
-            <img src="./img/imagen-inicio2.jpeg" alt="Mochilas Varias" width="500" height="500">
+        <img src="./img/imagen-inicio2.jpeg" alt="Mochilas Varias" width="500" height="500">
         <aside class="parrafo">
             <h3>Visión</h3>
             Nuestra empresa tiene como meta posicionarse como la mejor vendedora de mochilas de la región, así como ser reconocida por ofrecer productos de calidad.<br>Queremos que nuestros clientes de sientan satisfechos al consumir nuestros productos y se sientan identificados con nosotros.
@@ -80,7 +95,7 @@
         <div class="equipo_divGeneral">
             <div class="equipo_div">
                 <div class="equipo_div_content">
-                    <img src="./img/persona1-equipo.jpeg" alt="" width="400px" height="300px">
+                    <img src="./img/persona1-equipo.jpeg" alt="">
                     <p>Gerente general</p>
                     <p class="nombres_equipo"> Laura Retamaro</p>
                     <div class="equipo_div_content_atras">
@@ -93,7 +108,7 @@
 
             <div class="equipo_div">
                 <div class="equipo_div_content">
-                    <img src="./img/persona2-equipo.jpeg" alt="" width="400px" height="300px">
+                    <img src="./img/persona2-equipo.jpeg" alt="">
                     <p>Gerente Marketing de Contenidos</p>
                     <p class="nombres_equipo">Tomás Bustamante</p>
                     <div class="equipo_div_content_atras">
@@ -106,7 +121,7 @@
 
             <div class="equipo_div">
                 <div class="equipo_div_content">
-                    <img src="./img/persona3-equipo.jpeg" alt="" width="400px" height="300px">
+                    <img src="./img/persona3-equipo.jpeg" alt="">
                     <p>Community Manager</p>
                     <p class="nombres_equipo">Ricardo Valenzuela</p>
                     <div class="equipo_div_content_atras">
@@ -132,7 +147,7 @@
 
             <div class="equipo_div">
                 <div class="equipo_div_content">
-                    <img src="./img/persona5-equipo.jpeg" alt="" width="400px" height="300px">
+                    <img src="./img/persona5-equipo.jpeg" alt="">
                     <p>Surpervisora en jefe</p>
                     <p class="nombres_equipo">Marcela Prado</p>
                     <div class="equipo_div_content_atras">
@@ -176,7 +191,7 @@
 
     <div class="container beneficiosExclusivos mb-3">
         <div class="row">
-            <div class="col-xs-12 col-md-6 offset-md-3">
+            <div class="col-xs-12 col-xl-6 offset-xl-3">
                 <div class="row mb-2">
                     <div class="col-xs-12 text-center">
                         <span class="h4">Beneficios Exclusivos</span>

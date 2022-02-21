@@ -11,31 +11,94 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <div class="contenedor">
-        <header class="header">
-            <div class="header_logo">
-                <a href="../index.html">
-                    <h1 class="header_logo-h1">Backpack Village</h1>
-                </a>
-            </div>
-            <div class="header_links">
-                <nav class="links">
-                    <ul class="lista">
-                            <li><a href="../index.html" >Inicio</a></li>
-                            <li><a href="./productos.html">Productos</a>
-                                <ul class="sublista">
-                                    <li><a href="../vistas/mujer.html">Mujer</a></li>
-                                    <li><a href="../vistas/hombre.html">Hombre</a></li>
-                                    <li><a href="../vistas/kids.html">Kids</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./sucursales.html">Sucursales</a></li>
-                            <li><a href="./contacto.html">Contacto</a></li>
-                            <li><a href="./trabajaConNosotros.html">Trabaja con nosotros</a></li>
+    <header class="header container-fluid p-0 w-100">
+        <div class="header_logo row m-0 text-center">
+            <h1 class="header_logo-h1 my-3">Backpack Village</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-0 header_links">
+            <div class="container-fluid flex-column">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-around lista">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" >Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productos">
+                                <li><a class="dropdown-item" href="../vistas/mujer.html">Mujer</a></li>
+                                <li><a class="dropdown-item" href="../vistas/hombre.html">Hombre</a></li>
+                                <li><a class="dropdown-item" href="../vistas/kids.html">Kids</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vistas/sucursales.html" >Sucursales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../vistas/contacto.html" >Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vistas/trabajaConNosotros.html" >Trabaja con nosotros</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </header>
+        </nav>
+    </header>
+
+    <div class="fondo_contacto">
+        <h1 class="titulos">Contacto</h1>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <div class="card text-dark bg-light">
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="contacto" class="form-label">Nombre y Apellido</label>
+                                    <input type="text" class="form-control" name="campoContacto" id="contacto" placeholder="Nombre y Apellido">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" name="campoEmail" id="email" placeholder="E-mail">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono/Celular</label>
+                                    <input type="tel" class="form-control" name="campoTelefono" id="telefono" placeholder="Teléfono/Celular">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea name="campoMensaje" class="form-control" id="mensaje" placeholder="Díganos en qué podemos ayudarlo" rows="10"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-3">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="terminosYcondiciones" name="campoterminosYcondiciones">
+                                            <label class="form-check-label" for="terminosYcondiciones">
+                                                Acepto los terminos y condiciones
+                                            </label>
+                                        </div>
+                                        <div class="mb-3 text-center">
+                                            <button type="submit" class="btn btn-lg btn-primary col-xl-6">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <div class="contenedor">
+        
         <div class="fondo_contacto">
             <h1 class="titulos">Contacto</h1>
             <div>
@@ -64,7 +127,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div>
         <footer class="footerGeneral">
             <div class="footer left">

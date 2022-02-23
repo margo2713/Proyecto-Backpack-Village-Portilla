@@ -13,23 +13,20 @@ body {
 .header_logo {
     letter-spacing: 0.8rem;
     text-transform: uppercase;
-    background: #bdc3c7; 
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    
     height: fit-content;
 }
 
 .header_logo .header_logo-h1 {
-    color: rgb(74, 77, 99);
+    color: #14213D;
     font-size: 6rem;
     font-family: 'Shizuru', cursive;
-    text-shadow: 5px -3px 10px #f6f6f6;
+    text-shadow: 2px -1px #9b9898;
 }
 
 .header_links {
     width: 100%;
-    background-color: #FCA311;
+    background: #bdc3c7; 
+    background-image: url(../img/wave.svg);
     color: #735751;
     font-size: 16pt;
     font-weight:bold;
@@ -53,7 +50,6 @@ body {
     color: white;
     text-shadow: 0.5px -0.5px #735751;
 }
-
 .lista {
     width: 98vw;
 }
@@ -86,7 +82,6 @@ body {
     display: flex;
     overflow-x: scroll;
 }
-
 .img-carrusel {
     height: 600px;
     object-fit: cover;
@@ -161,26 +156,27 @@ body {
     filter: blur(2px);
 }
 
-.equipo_div_content img:hover ~ .equipo_div_content_atras {
-    display: block;
-    z-index: 10;
+.equipo_div_content_imagen {
+    position: relative;
+}
+
+.equipo_div_content_imagen_atras {
     position: absolute;
-    width: 350px;
-    left: 0;
-    margin-left: 4.5rem;
+    display: none;
+    top: 4rem;
+    left: 0.1rem;
+    pointer-events: none;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 1px 1px 20px white;
-    pointer-events: none;
     font-weight: bold;
     text-align: center;
     padding: 0.5rem;
+    margin: 0.5rem;
 }
 
-.equipo_div:nth-child(even) .equipo_div_content img:hover ~ .equipo_div_content_atras {
-    left: auto;
-    right:0;
-    margin-right: 3rem;
+.equipo_div_content img:hover ~ .equipo_div_content_imagen_atras {
+    display: block;
 }
 
 .equipo_div:first-child {
@@ -348,29 +344,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.sucursales {
-    margin: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 1000px;
-    padding-left: 14rem;
-    padding-bottom: 2rem;
+.sucursales .list-group-item.active {
+    background-color: #adb4b9;
+    border-color: #adb4b9;
 }
 
-.sucursales .subtitulo-sucursal {
-    margin-top: 2rem;
-}
-
-.sucursales a:visited,
-.sucursales a:active,
-.sucursales a:any-link {
-    color: #3D405B;
-    text-decoration: none;
-}
-
-.sucursales a:hover {
-    color: #FCA311;
+.ctn-mapa {
+    height: 20rem;
 }
 
 .sucursalmapa {
@@ -378,13 +358,6 @@ body {
     flex-direction: row;
     margin-bottom: 3rem;
 }
-
-.mapa {
-    margin: 3rem;
-    padding-right: 7rem;
-    padding-bottom: 2rem;
-}
-
 
 .fondo_contacto {
     background-image: url("../img/fondo-contacto.jpeg");
@@ -488,16 +461,11 @@ body {
         max-height: 22rem;
     }
 
-    .lista {
-        border: #f6f6f6 solid 2px;
-    }
-
     .mochilasVarias {
         max-width: 768px;
         flex-direction: column;
         margin: 0;
         align-items: center;
-        
     }
 
     .equipo_divGeneral {
@@ -534,6 +502,7 @@ body {
         margin-left: 13rem;
         margin-bottom: 4rem;
         padding: 1;
+        left: 0;
     }
 
     .marcas {
@@ -569,18 +538,14 @@ body {
         align-items: center;
     }
 
-    .sucursales {
-        max-width: 768px;
-        margin: 0;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-left: 1rem;
-    }
-
     .mapa {
         max-width: 768px;
         padding-right: 0;
         margin: 10px;
+    }
+
+    .ctn-mapa {
+        height: 20rem;
     }
 
     .mapa iframe {
@@ -733,11 +698,6 @@ body {
         flex-direction: column;
     }
 
-    .sucursales {
-        max-width: 100%;
-        margin: 0;
-    }
-
     .mapa {
         max-width: 100%;
         padding-right: 0;
@@ -799,6 +759,13 @@ body {
         height: auto;
     }
 
+    .header_logo {
+        letter-spacing: 0;
+        text-transform: uppercase;
+        height: fit-content;
+        width: 100%;
+    }
+
     .header_logo .header_logo-h1 {
         font-size: 2.5rem;
     }
@@ -813,6 +780,10 @@ body {
 
     .equipo_divGeneral {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .equipo_div_content_imagen_atras {
+        top: 0;
     }
 
     .equipo_div,

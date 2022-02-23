@@ -12,12 +12,11 @@
 </head>
 <body>
     <header class="header container-fluid p-0 w-100">
-        <div class="header_logo row m-0 text-center">
-            <h1 class="header_logo-h1 my-3">Backpack Village</h1>
-        </div>
-
         <nav class="navbar navbar-expand-lg navbar-light py-0 header_links">
             <div class="container-fluid flex-column">
+                <div class="header_logo">
+                    <a class="navbar-brand header_logo-h1 my-3" href="#"> <p>Backpack Village</p></a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -53,9 +52,9 @@
     
     <h1 class="titulos">Nuestras Sucursales</h1>
     <div class="container mb-4">
-        <div class="row">
-            <div class="col-xs-12 col-lg-6">
-                <div class="list-group" role="tablist">
+        <div class="row gap-3">
+            <div class="col-xs-12 col-lg-5">
+                <div class="list-group sucursales" role="tablist">
                     <a data-bs-toggle="list" role="tab" href="#alcala" target="mapa" class="list-group-item list-group-item-action active" aria-current="true">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Sucursal Alcalá</h5>
@@ -80,7 +79,7 @@
                   </div>
             </div>
             <div class="col-xs-12 col-lg-6">
-                <div class="tab-content w-100 h-100">
+                <div class="tab-content w-100 ctn-mapa">
                     <div class="tab-pane fade show active w-100 h-100" id="alcala" role="tabpanel">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8236499209233!2d-3.646988484748067!3d40.43490367936299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f408177682f%3A0xa5f26705cf9473fb!2sC.%20de%20Alcal%C3%A1%2C%20365%2C%2028027%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1642453655681!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" name="mapa" class="w-100 h-100"></iframe>
                     </div>

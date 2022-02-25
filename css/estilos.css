@@ -10,23 +10,31 @@ body {
     background-color: #f6f6f6;
 }
 
+.header {
+    background: #bdc3c7; 
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+}
+
 .header_logo {
     letter-spacing: 0.8rem;
     text-transform: uppercase;
     height: fit-content;
 }
 
-.header_logo .header_logo-h1 {
+.header_logo .header_logo-h1 p {
     color: #14213D;
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: 'Shizuru', cursive;
     text-shadow: 2px -1px #9b9898;
+    white-space: normal;
+    text-align: center;
 }
 
 .header_links {
     width: 100%;
-    background: #bdc3c7; 
-    background-image: url(../img/wave.svg);
     color: #735751;
     font-size: 16pt;
     font-weight:bold;
@@ -445,10 +453,8 @@ body {
         height: auto;
     }
 
-    .header_logo a .header_logo-h1 {
-        font-size: 6rem;
-        text-shadow: 5px 5px 10px #fca311;
-        text-align: center;
+    .header_logo .header_logo-h1 p{
+        font-size: 4rem;
     }
 
     .header_links {
@@ -582,11 +588,11 @@ body {
         height: auto;
     }
 
-    .header_logo .header_logo-h1 {
-        font-size: 3.5rem;
-        text-shadow: 5px 5px 10px #fca311;
+    .header_logo .header_logo-h1 p{
+        font-size: 3rem;
+        /* text-shadow: 5px 5px 10px #fca311;
         text-align: center;
-        color: rgb(196 199 217);
+        color: rgb(196 199 217); */
     }
 
     .header_links {
@@ -766,8 +772,8 @@ body {
         width: 100%;
     }
 
-    .header_logo .header_logo-h1 {
-        font-size: 2.5rem;
+    .header_logo .header_logo-h1 p {
+        font-size: 3rem;
     }
 
     .header_links {

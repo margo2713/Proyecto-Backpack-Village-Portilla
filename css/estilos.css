@@ -41,46 +41,8 @@ body {
     text-shadow: 0.5px -0.5px #E5E5E5;
 }
 
-.links a:visited,
-.links a:active,
-.links a:any-link{
-    color: #735751;
-    text-decoration: none;
-    text-shadow: 0.5px -0.5px #E5E5E5;
-    font-size: 16pt;
-}
-
-.links {
-    width: 70rem;
-}
-
-.links a:hover {
-    color: white;
-    text-shadow: 0.5px -0.5px #735751;
-}
 .lista {
     width: 98vw;
-}
-
-.sublista {
-    list-style: none;
-    position: absolute;
-    display: none;
-    background: #FCA311;
-    visibility: hidden;
-    transition: visibility 5s; 
-}
-
-.sublista li a{
-	display: block;
-	padding: 18px;
-	color: #E07A5F;
-	text-decoration: none;
-}
-
-.lista li:hover .sublista{
-	display: block;
-    visibility: visible;
 }
 
 .carrusel {
@@ -241,36 +203,7 @@ body {
     filter: opacity(1);
     box-shadow: 1px 1px 20px black;
 }
-
-.div_form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background-color: #E5E5E5;
-}
-
-.formulario_beneficios {
-  margin: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bolder;
-}
-
-.fieldset_beneficios {
-    border-style: double;
-    border-width: 0.3rem;
-    border-color: gray;
-    color: #3D405B;
-    width: 650px;
-    height: 150px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
+/***--------***/
 
 .beneficiosExclusivos {
     font-family: 'Open Sans';
@@ -306,50 +239,11 @@ body {
     padding-left: 0.5rem;
 }
 
-.mochila {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    margin: 2rem;
-}
-
-.mochila .mochila-span {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.mochila .mochila-img {
-    margin: 3rem 1rem 3rem;
-    border-radius: 10% 10% / 10% 10%
-}
-
 .mochila-img {
     height: 32rem;
     width: 23.125rem;
     object-fit: contain;
     align-self: center;
-}
-
-
-.opciones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    max-width: 300px;
-    margin: 2rem;
-}
-
-.productos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.fila {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .sucursales .list-group-item.active {
@@ -361,12 +255,6 @@ body {
     height: 20rem;
 }
 
-.sucursalmapa {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 3rem;
-}
-
 .fondo_contacto {
     background-image: url("../img/fondo-contacto.jpeg");
     background-repeat: no-repeat;
@@ -374,75 +262,12 @@ body {
     background-position: center;
 }
 
-.formularios {
-    padding: 4rem;
-}
-
-.formularios .formulario-general {
-    width: 30rem;
-}
-
-.formularios .formulario-general .formulario-label {
-    margin-top: 0.7rem;
-    margin-left: 5rem;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    text-shadow: 1.5px 1.5px #000000;
-}
-
-.formularios .formulario-general .formulario-label .formulario-input,
-.formularios .formulario-general .formulario-label .formulario-textarea {
-    margin-top: 0.5rem;
-    font-family: 'Open Sans';
-}
-
-.formularios .formulario-general .terminos-condiciones {
-    flex-direction: row;
-    justify-content: center;
-}
-
-.boton-enviar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.boton-enviar-formularios {
-    margin: 2rem;
-    margin-left: 6.3rem;
-    width: 10em;
-    height: 3em;
-    border: none;
-    font-family: 'OpenSans-ExtraBold', sans-serif;
-}
 
 .form-work {
     background-image: url(../img/fondo-work2.jpeg);
     background-size: cover;
 }
 
-.form-work .formulario-general {
-    width: 35rem;
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-    padding: 4rem;
-    padding-top: 1rem;
-}
-
-.form-work .formulario-general .formulario-label {
-    margin-top: 1rem;
-}
-
-.form-work .formulario-general .formulario-label .formulario-input {
-    margin-top: 0.5rem;
-}
-
-.formularios .formulario-general .texto-oscuro {
-    color: #000000;
-    text-shadow: 0.5px 0.5px #E5E5E5;
-}
 
 /*MEDIA QUERIES*/
 

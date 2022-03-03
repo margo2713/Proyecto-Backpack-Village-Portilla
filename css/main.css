@@ -48,16 +48,6 @@ body {
   width: 98vw;
 }
 
-.carrusel {
-  width: 100%;
-  margin-bottom: 6rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-}
-
 .img-carrusel {
   height: 37.5rem;
   -o-object-fit: cover;
@@ -334,16 +324,37 @@ body {
   height: 20rem;
 }
 
-.fondo_contacto {
-  background-image: url("../img/fondo-contacto.jpeg");
-  background-repeat: no-repeat;
+.fondo-contacto {
+  background-image: url(../img/fondo-contacto.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
-.form-work {
+.fondo-work {
   background-image: url(../img/fondo-work2.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.boton-comprar, .boton-comprar-hombre, .boton-comprar-mujer, .boton-comprar-kids {
+  margin-top: 0.5rem;
+  font-weight: 800;
+}
+
+.boton-comprar-hombre {
+  background-color: #005f73;
+  color: white;
+}
+
+.boton-comprar-mujer {
+  background-color: #ca6702;
+  color: white;
+}
+
+.boton-comprar-kids {
+  background-color: #e9d8a6;
 }
 
 @media screen and (max-width: 768px) {

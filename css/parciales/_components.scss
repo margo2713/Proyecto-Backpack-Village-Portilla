@@ -1,15 +1,9 @@
 @import "./variables";
+@import "./mixins";
 
-.carrusel {
-    width: 100%;
-    margin-bottom: 6rem;
-    text-align: center;
-    display: flex;
-    overflow-x: scroll;
-}
 .img-carrusel {
-    height: 37.5rem;
-    object-fit: cover;
+    height: map-get($fotos-carrusel, altura);
+    object-fit: map-get($fotos-carrusel, encaje);
 }
 
 .parrafo {
@@ -53,14 +47,12 @@
     }
     
     &_div {
-        display: flex;
-        flex-direction: row;
+        @include flex(row);
         justify-content: flex-start;
         margin-top: -2.6rem;
 
         &_content {
-            display: flex;
-            flex-direction: row;
+            @include flex(row);
             align-items: center;
             width: 100%;
             justify-content: space-evenly;
@@ -175,14 +167,12 @@
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     justify-content: center;
     color: white;
 
     &-parrafo {
-        display: flex;
-        flex-direction: row;
+        @include flex(row);
         align-items: center;
 
         .footer-anchor {
@@ -209,14 +199,33 @@
     height: 20rem;
 }
 
-.fondo_contacto {
-    background-image: url("../img/fondo-contacto.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+@each $fondo, $imagen in $fondos {
+    .fondo-#{$fondo}{
+        background-image: url(../img/#{$imagen});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
-.form-work {
-    background-image: url(../img/fondo-work2.jpeg);
-    background-size: cover;
+.boton-comprar {
+    margin-top: 0.5rem;
+    font-weight: 800;
+}
+
+.boton-comprar-hombre {
+    @extend .boton-comprar;
+    background-color: #005f73;
+    color: white
+}
+
+.boton-comprar-mujer {
+    @extend .boton-comprar;
+    background-color: #ca6702;
+    color: white
+}
+
+.boton-comprar-kids {
+    @extend .boton-comprar;
+    background-color: #e9d8a6;
 }

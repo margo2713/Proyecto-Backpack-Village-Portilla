@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,6 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #000000;
-    background-color: #f6f6f6;
+    color: map-get($colores, general);
+    background-color: map-get($colores, fondo);
 }

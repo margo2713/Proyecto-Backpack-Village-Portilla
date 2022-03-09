@@ -1,6 +1,27 @@
-$color-sucursal-activa: #adb4b9;
 $fondos:(contacto:"fondo-contacto.jpeg", work:"fondo-work2.jpeg");
 $fotos-carrusel:(
     altura: 37.5rem,
     encaje: cover
+);
+$colores:(
+    general:#000000,
+    fondo:#f6f6f6,
+    encabezado:#bdc3c7,
+    logo:#14213D,
+    vinculos:#735751,
+    vinculos-sombra:#E5E5E5,
+    titulo:#3D405B,
+    titulo-claro:#f6f6f6,
+    titulo-claro-sombra:#000000,
+    nombre-equipo:#3d405d,
+    nombre-equipo-fondo:#f6f6f6,
+    nombre-equipo-sombra:#ffffff,
+    footer:#ffffff,
+    footer-fondo:#14213D,
+    boton-fondo-hombre:#005f73,
+    boton-fondo-mujer:#ca6702,
+    boton-fondo-kids:#e9d8a6,
+    boton-hombre:#ffffff,
+    boton-mujer:#ffffff,
+    sucursal-activa:#adb4b9
 );

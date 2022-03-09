@@ -31,15 +31,15 @@
     .equipo_divGeneral {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        margin: 1px;
+        margin: 0.063rem;
 
         img, p{
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
     }
 
     .equipo_div_content {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
         display: flex;
         flex-direction: column;
 
@@ -68,8 +68,8 @@
     }
 
     .marcas {
-        grid-template-columns: 300px 300px;
-        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 18.75rem 18.75rem;
+        grid-template-rows: 18.75rem 18.75rem 18.75rem;
     }
 
     .mochila-img {

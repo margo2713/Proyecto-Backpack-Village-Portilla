@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-backpack-village-portilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build-css":"node-sass --include-path scss css/main.scss css/main.css",
+    "watch-css":"nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/margo2713/Proyecto-Backpack-Village-Portilla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/margo2713/Proyecto-Backpack-Village-Portilla/issues"
+  },
+  "homepage": "https://github.com/margo2713/Proyecto-Backpack-Village-Portilla#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

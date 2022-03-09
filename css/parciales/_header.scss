@@ -1,5 +1,7 @@
+@import './variables';
+
 .header {
-    background: #bdc3c7; 
+    background: map-get($colores, encabezado); 
     background-image: url(../img/wave.svg);
     background-size: cover;
     background-position: 0;
@@ -11,7 +13,7 @@
         height: fit-content;
 
         & &-h1 p {
-            color: #14213D;
+            color: map-get($colores, logo);
             font-size: 4rem;
             font-family: 'Shizuru', cursive;
             text-shadow: 2px -1px #9b9898;
@@ -22,10 +24,10 @@
     
     &_links {
         width: 100%;
-        color: #735751;
+        color: map-get($colores, vinculos);
         font-size: 16pt;
         font-weight:bold;
-        text-shadow: 0.5px -0.5px #E5E5E5;
+        text-shadow: 0.5px -0.5px map-get($colores, vinculos-sombra);
     }
 }
 

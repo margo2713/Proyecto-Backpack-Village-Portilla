@@ -20,22 +20,22 @@
     text-align: center;
     font-size: 3rem;
     font-family: 'OpenSans-ExtraBold', sans-serif;
-    color: #3D405B;
+    color: map-get($colores, titulo);
 }
 
 .claro {
-    color: #f6f6f6;
-    text-shadow: 2px 2px #000000;
+    color: map-get($colores, titulo-claro);
+    text-shadow: 0.125rem 0.125rem map-get($colores, titulo-claro-sombra);
 }
 
 .mochilasVarias {
-    margin: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
+    @include flex(row);
+
+    margin: 1.25rem;
+    padding: 0.938rem;
 
     img {
-        border-radius: 10px 100px / 120px;
+        border-radius: 0.625rem 6.25rem / 7.5rem;
         object-fit: cover;
     }
 }
@@ -64,14 +64,14 @@
                 transform: skewY(0deg);
                 filter: none;
                 transition: transform 2s, filter 2s; 
-                border-radius: 10px 100px / 120px;
+                border-radius: 0.625rem 6.25rem / 7.5rem;
                 object-fit: cover;
             }
 
             & img:hover {
                 transform: rotateY(180deg);
                 transform-style: preserve-3d;
-                filter: blur(2px);
+                filter: blur(0.125rem);
             }
 
             &_imagen {
@@ -84,8 +84,8 @@
                     left: 0.1rem;
                     pointer-events: none;
                     background-color: rgba(255, 255, 255, 0.7);
-                    border-radius: 10px;
-                    box-shadow: 1px 1px 20px white;
+                    border-radius: 0.625rem;
+                    box-shadow: 0.063rem 0.063rem 1.25rem map-get($colores, nombre-equipo-sombra);
                     font-weight: bold;
                     text-align: center;
                     padding: 0.5rem;
@@ -99,10 +99,10 @@
             
             .nombres_equipo {
     
-                color: #3d405d;
-                background-color: #f6f6f6;
+                color: map-get($colores, nombre-equipo);
+                background-color: map-get($colores, nombre-equipo-fondo);
                 text-transform: uppercase;
-                letter-spacing: 5px;
+                letter-spacing: 0.313rem;
                 font-size: 1.4rem;
                 font-family: 'OpenSans-ExtraBold', sans-serif;
             }
@@ -145,7 +145,7 @@
 
         img:hover {
             filter: opacity(1);
-            box-shadow: 1px 1px 20px black;
+            box-shadow: 0.063rem 0.063rem 1.25rem black;
         }
     }
 }
@@ -158,7 +158,7 @@
 .footerGeneral {
     width: 100%;
     height: 6rem;
-    background-color: #14213D;
+    background-color: map-get($colores, footer-fondo);
     display: flex;
     padding-left: 1rem;
     flex-direction: row;
@@ -169,7 +169,7 @@
 .footer {
     @include flex(column);
     justify-content: center;
-    color: white;
+    color: map-get($colores, footer);
 
     &-parrafo {
         @include flex(row);
@@ -190,8 +190,8 @@
 
 .sucursales {
     .list-group-item.active {
-        background-color: $color-sucursal-activa;
-        border-color: $color-sucursal-activa;
+        background-color: map-get($colores, sucursal-activa);
+        border-color: map-get($colores, sucursal-activa);
     }
 }
 
@@ -215,17 +215,17 @@
 
 .boton-comprar-hombre {
     @extend .boton-comprar;
-    background-color: #005f73;
-    color: white
+    background-color: map-get($colores, boton-fondo-hombre);
+    color: map-get($colores, boton-hombre)
 }
 
 .boton-comprar-mujer {
     @extend .boton-comprar;
-    background-color: #ca6702;
-    color: white
+    background-color: map-get($colores, boton-fondo-mujer);
+    color: map-get($colores, boton-mujer)
 }
 
 .boton-comprar-kids {
     @extend .boton-comprar;
-    background-color: #e9d8a6;
+    background-color: map-get($colores, boton-fondo-kids);
 }
